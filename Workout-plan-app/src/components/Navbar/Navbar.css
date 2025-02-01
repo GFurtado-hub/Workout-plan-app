@@ -1,0 +1,25 @@
+.logo {
+    height: 14em;
+    margin-left: 14rem;
+    width: 30%;
+    height: 30%;
+    align-items: center;
+}
+
+.Navbar {
+    display: flex;
+    align-items: center;
+    position:fixed;
+    top: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+
+
+
