@@ -1,24 +1,11 @@
-import './Navbar.css';
-import Logo from '../../assets/kaboom.png';
-import { Link } from 'react-router-dom';
-
+import Logo from '../../assets/kaboom.png'
+import './Navbar.css'
 function Navbar() {
   return (
-    <div className="container">
-      <div className="logo-container">
-        <img src={Logo} alt="Logo" className="logo" />
-      </div>
-
-      <div className="auth-links">
-      <Link to="/WorkoutPlansDetails">Workouts Preview</Link>
-      <Link to="/login">Log In</Link>
-      <Link to="/signup">Sign Up</Link>
-
-      </div>
-
-     
-    </div>
+    <nav className="navbar">
+      <img src={Logo} alt="Logo" className='logo'/>
+      <h1><strong>GLADIATOR FITNESS</strong></h1>
+    </nav>
   );
 }
-
 export default Navbar;

@@ -1,15 +1,17 @@
 import './Footer.css'
 
-function Footer() {
-    return (
-    
+
+const Footer = () => {
+  return (
     <footer className="footer">
-    <a href="" target="_blank" rel="noopener noreferrer">
-      About Us
-    </a>
-  </footer>
-  
-)
-}
+      <p>
+        Visit my GitHub:{" "}
+        <a className="footer" href="https://https://github.com/FraT97/Workout-plan-app">
+          View on GitHub
+        </a>
+      </p>
+    </footer>
+  );
+};
 
 export default Footer;

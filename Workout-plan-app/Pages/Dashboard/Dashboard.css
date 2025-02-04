@@ -1,0 +1,17 @@
+.dashboard-container {
+    padding: 20px;
+  }
+  
+  .workouts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .workout-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }

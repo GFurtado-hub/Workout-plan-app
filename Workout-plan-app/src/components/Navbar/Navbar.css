@@ -1,48 +1,13 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    background-color: black; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    color: white;
-}
-
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-
 .logo {
+    height: 14em;
+    margin-left: 20rem;
     width: 30%;
-    height: auto;
+    height: 30%;
 }
-
-
-.auth-links {
-    margin-top: 20px; 
+.navbar {
+    display: flex;
+    align-items: center;
 }
-
-.auth-links a {
-    color: rgb(244, 244, 247);
-    font-size: 1.2rem;
-    margin: 0 15px;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.2s ease; 
+.navbar h1 {
+    color: #121111;
 }
-
-.auth-links a:hover {
-    color: #430beb; 
-    transform: scale(1.1);
-    text-decoration: underline;
-}
-
-
