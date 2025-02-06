@@ -41,9 +41,9 @@ function WorkoutPlansDetails() {
                         ))}
                     </ul>
                     <div className="button-container">
-                        <Link to={`/WorkoutPlansDetails/${workout.id}`}>View Details</Link>
+                        <Link to={`/WorkoutPlansDetails/${workout.id}`}>EDIT</Link>
                         <button onClick={() => deleteWorkout(workout.id)} className="delete-button">
-                            Delete
+                            DELETE
                         </button>
                     </div>
                 </div>

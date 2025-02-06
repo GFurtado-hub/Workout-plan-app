@@ -1,8 +1,8 @@
-
+/* Sidebar Styles */
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -220px; /* Initially hidden off-screen */
   width: 220px;
   height: 100%;
   background-color: #2C2F33;
@@ -11,15 +11,33 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.sidebar.open {
+  left: 0; 
+}
+
 .sidebar a {
   display: block;
   padding: 15px;
   color: white;
   text-decoration: none;
+  
 }
 
 .sidebar a:hover {
   background-color: #40444B;
+}
+
+
+.menu-button {
+  position: fixed;
+  top: 20px;  
+  left: 20px; 
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000; 
 }
 
 

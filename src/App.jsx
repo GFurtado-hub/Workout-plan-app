@@ -5,9 +5,10 @@ import Footer from './components/Footer/Footer';
 import WorkoutPlansDetails from '../Pages/WorkoutPlansDetails/WorkoutPlansDetails';
 import WorkoutDetails from '../Pages/WorkoutDetails/WorkoutDetails';
 import AboutPage from "../Pages/AboutPage/AboutPage";
-//import Login from './components/Login';
-//import SignUp from './components/SignUp'; 
 import Sidebar from './components/Sidebar/Sidebar';
+import AddNewWorkout from '../Pages/AddNewWorkout/AddNewWorkout';
+import ErrorPage from '../Pages/ErrorPage/ErrorPage';
+import HomePage from './components/HomePage/HomePage';
 
 
 function App() {
@@ -18,10 +19,12 @@ function App() {
 
 
       <Routes>
-      
+        <Route path="/" element={<HomePage />} />
+        <Route path="/add-new-workout" element={<AddNewWorkout />} />
         <Route path="/WorkoutPlansDetails" element={<WorkoutPlansDetails />} />
         <Route path="/WorkoutPlansDetails/:id" element={<WorkoutDetails />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<ErrorPage />} />
         
       </Routes>
 

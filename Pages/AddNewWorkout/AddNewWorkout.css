@@ -1,0 +1,88 @@
+.add-workout-container {
+    padding: 20px;
+    border: 1px solid #2C2F33;
+    border-radius: 8px;
+    background-color: #2C2F33;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.add-workout-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; 
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0e0f0e;
+}
+
+button[type="button"] {
+    background-color: rgb(21, 20, 20);
+    margin-top: 10px;
+}
+
+
+
+.exercise-form-group {
+    margin-bottom: 20px;
+    border: 1px solid #2C2F33;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #2C2F33;
+}
+
+.exercise-form-group .form-group {
+    margin-bottom: 10px;
+}
+
+.exercise-form-group label {
+    font-weight: normal;
+}
+
+.exercise-form-group input {
+    font-size: 14px; 
+}
+
+.submit-button {
+    width: 100%;
+    background-color: rgb(21, 20, 20);
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
