@@ -1,5 +1,5 @@
 .about-page {
-    background-color: #F9F9F9;
+    background-color: #2C2F33;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -21,7 +21,7 @@
     font-weight: bold;
   }
 .about-page {
-    background-color: #F9F9F9;
+    background-color: #2C2F33;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -38,7 +38,7 @@
   }
   .about-page h2 {
     font-size: 1.8rem;
-    color: #444;
+    color: white;
     margin-bottom: 15px;
     text-align: center;
     font-weight: bold;
@@ -51,7 +51,7 @@
     margin-bottom: 30px;
   }
   .team-member {
-    background-color: #FFFFFF;
+    background-color: #2C2F33;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -71,7 +71,7 @@
   }
   .member-title {
     font-style: italic;
-    color: #777;
+    color: white;
     margin-top: 5px;
   }
   .team-member .social-links {
@@ -93,12 +93,12 @@
   }
   .team-member h3 {
     font-size: 1.6rem;
-    color: #333;
+    color: white;
     margin: 0;
     font-weight: bold;
   }
   .team-member p {
-    color: #666;
+    color: white;
     font-size: 1rem;
     margin-top: 5px;
   }
@@ -109,17 +109,17 @@
   }
   .team-member .social-links a {
     margin-right: 15px;
-    color: #141517;
+    color: white;
     font-size: 1.2rem;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   .team-member .social-links a:hover {
-    color: #0e0e0f;
+    color: white;
   }
   .about-page .project-details {
     margin-top: 30px;
     text-align: center;
     font-size: 1.2rem;
-    color: #555;
+    color: white;
   }

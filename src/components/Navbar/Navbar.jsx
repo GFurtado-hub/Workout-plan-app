@@ -1,5 +1,7 @@
-import Logo from '../../assets/kaboom.png'
-import './Navbar.css'
+import Logo from '../../assets/kaboom.png';
+import './Navbar.css';
+import '../Sidebar/Sidebar.css';
+
 function Navbar() {
   return (
     <nav className="navbar">

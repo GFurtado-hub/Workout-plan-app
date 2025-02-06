@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './WorkoutPlansDetails.css'; 
@@ -16,15 +16,36 @@ function WorkoutPlansDetails() {
             });
     }, []);
 
+    
+    const deleteWorkout = (id) => {
+        axios.delete(`https://json-server-backend-p30d.onrender.com/workouts/${id}`)
+            .then(() => {
+                
+                setWorkouts(workouts.filter(workout => workout.id !== id));
+            })
+            .catch(error => {
+                console.error('Error deleting the workout!', error);
+            });
+    };
+
     return (
         <div className="workouts-container">
             {workouts.map(workout => (
                 <div key={workout.id} className="workout-card">
                     <h2>{workout.name}</h2>
-                    <p>{workout.exercises}</p>
-                    <p>{workout.sets} x {workout.reps}</p>
-                    <p>{workout.weight}kg</p>
-                    <Link to={`/WorkoutPlansDetails/${workout.id}`}>View Details</Link>
+                    <ul>
+                        {workout.exercises.map((exercise, index) => (
+                            <li key={index}>
+                                <strong>{exercise.name}</strong>: {exercise.sets} sets x {exercise.reps} reps, {exercise.weight} kg
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="button-container">
+                        <Link to={`/WorkoutPlansDetails/${workout.id}`}>View Details</Link>
+                        <button onClick={() => deleteWorkout(workout.id)} className="delete-button">
+                            Delete
+                        </button>
+                    </div>
                 </div>
             ))}
         </div>
