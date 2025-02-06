@@ -1,4 +1,4 @@
-.add-workout-container {
+.edit-workout-container {
     padding: 20px;
     border: 1px solid #2C2F33;
     border-radius: 8px;
@@ -7,22 +7,23 @@
     margin: 0 auto; 
 }
 
-.add-workout-container h2 {
+.edit-workout-container h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.form-group {
+
+.edit-workout-container .form-group {
     margin-bottom: 15px;
 }
 
-label {
+.edit-workout-container label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-input, textarea {
+.edit-workout-container input, .edit-workout-container textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -31,12 +32,12 @@ input, textarea {
     font-size: 16px;
 }
 
-textarea {
+.edit-workout-container textarea {
     resize: vertical; 
 }
 
-button {
-    background-color: #4CAF50;
+.edit-workout-container button {
+    background-color: red;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -44,22 +45,20 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    margin-bottom: 50px;
 }
 
-button:hover {
+.edit-workout-container button:hover {
     background-color: rgb(177, 15, 15);
 }
 
-button[type="button"] {
-    background-color: red;
+.edit-workout-container button[type="button"] {
+    background-color: rgb(21, 20, 20);
     margin-top: 10px;
 }
 
-button[type="button"]:hover {
-    background-color: rgb(177, 15, 15); 
-}
 
-.exercise-form-group {
+.edit-workout-container .exercise-form-group {
     margin-bottom: 20px;
     border: 1px solid #2C2F33;
     padding: 15px;
@@ -67,27 +66,22 @@ button[type="button"]:hover {
     background-color: #2C2F33;
 }
 
-.exercise-form-group .form-group {
+.edit-workout-container .exercise-form-group .form-group {
     margin-bottom: 10px;
 }
 
-.exercise-form-group label {
+.edit-workout-container .exercise-form-group label {
     font-weight: normal;
 }
 
-.exercise-form-group input {
+.edit-workout-container .exercise-form-group input {
     font-size: 14px; 
 }
 
-.submit-button {
+.edit-workout-container .submit-button {
     width: 100%;
-    background-color: red;
+    background-color: rgb(21, 20, 20);
     padding: 12px;
     font-size: 16px;
     border-radius: 5px;
-    margin-bottom: 50px;
-}
-
-.submit-button:hover {
-    background-color: rgb(177, 15, 15); 
 }

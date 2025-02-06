@@ -1,64 +1,72 @@
-import  { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
-import './AddNewWorkout.css';
+import "./EditWorkout.css"
 
-function AddNewWorkout() {
-    const [workoutName, setWorkoutName] = useState('');
-    const [description, setDescription] = useState('');
-    const [exercises, setExercises] = useState([{ name: '', sets: '', reps: '', weight: '' }]);
 
-    const handleInputChange = (e) => {
+function EditWorkout() {
+    const { id } = useParams();  
+    const navigate = useNavigate();  
+    const [workout, setWorkout] = useState(null);  
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        axios.get(`https://json-server-backend-p30d.onrender.com/workouts/${id}`)
+            .then(response => {
+                setWorkout(response.data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching workout details!', error);
+                setError('Error loading workout details');
+                setLoading(false);
+            });
+    }, [id]);
+
+    const handleChange = (e) => {
         const { name, value } = e.target;
-        if (name === 'workoutName') setWorkoutName(value);
-        if (name === 'description') setDescription(value);
+        setWorkout(prevWorkout => ({
+            ...prevWorkout,
+            [name]: value
+        }));
     };
 
     const handleExerciseChange = (index, e) => {
-        const updatedExercises = [...exercises];
-        updatedExercises[index][e.target.name] = e.target.value;
-        setExercises(updatedExercises);
-    };
-
-    const addExercise = () => {
-        setExercises([...exercises, { name: '', sets: '', reps: '', weight: '' }]);
+        const { name, value } = e.target;
+        const updatedExercises = [...workout.exercises];
+        updatedExercises[index][name] = value;
+        setWorkout({ ...workout, exercises: updatedExercises });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        const newWorkout = {
-            name: workoutName,
-            description: description,
-            exercises: exercises
-        };
-
-        axios.post('https://json-server-backend-p30d.onrender.com/workouts', newWorkout)
-        .then(response => {
-            console.log('Workout added:', response.data);  
-            alert('Workout added successfully!');
-            setWorkoutName('');
-            setDescription('');
-            setExercises([{ name: '', sets: '', reps: '', weight: '' }]);
-        })
-        .catch(error => {
-            console.error('Error adding workout!', error);
-            alert('There was an error adding the workout.');
-        });
-    
+        axios.put(`https://json-server-backend-p30d.onrender.com/workouts/${id}`, workout)
+            .then(() => {
+                alert('Workout updated successfully!');
+                navigate(`/WorkoutPlansDetails`); 
+            })
+            .catch(error => {
+                console.error('Error updating the workout!', error);
+                alert('Error updating the workout.');
+            });
     };
 
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>{error}</div>;
+
     return (
-        <div className="add-workout-container">
-            <h2>Add New Workout</h2>
+        <div className="edit-workout-container">
+            <h2>Edit Workout</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="workoutName">Workout Name:</label>
+                    <label htmlFor="name">Workout Name:</label>
                     <input
                         type="text"
-                        id="workoutName"
-                        name="workoutName"
-                        value={workoutName}
-                        onChange={handleInputChange}
+                        id="name"
+                        name="name"
+                        value={workout.name}
+                        onChange={handleChange}
                         required
                     />
                 </div>
@@ -68,14 +76,14 @@ function AddNewWorkout() {
                     <textarea
                         id="description"
                         name="description"
-                        value={description}
-                        onChange={handleInputChange}
+                        value={workout.description}
+                        onChange={handleChange}
                         required
                     />
                 </div>
 
                 <h3>Exercises</h3>
-                {exercises.map((exercise, index) => (
+                {workout.exercises.map((exercise, index) => (
                     <div key={index} className="exercise-form-group">
                         <div className="form-group">
                             <label htmlFor={`exerciseName-${index}`}>Exercise Name:</label>
@@ -123,13 +131,10 @@ function AddNewWorkout() {
                         </div>
                     </div>
                 ))}
-
-                <button type="button" onClick={addExercise}>Add Another Exercise</button>
-                <br />
-                <button type="submit" className="submit-button">Add Workout</button>
+                <button type="submit">Update Workout</button>
             </form>
         </div>
     );
 }
 
-export default AddNewWorkout;
+export default EditWorkout;

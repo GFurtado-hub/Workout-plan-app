@@ -1,14 +1,15 @@
-/* Sidebar Styles */
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: -220px; /* Initially hidden off-screen */
+  left: -220px; 
   width: 220px;
   height: 100%;
   background-color: #2C2F33;
   padding-top: 70px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
+  padding-top: 100px;
 }
 
 .sidebar.open {
@@ -20,6 +21,8 @@
   padding: 15px;
   color: white;
   text-decoration: none;
+
+  
   
 }
 
@@ -38,6 +41,7 @@
   color: #fff;
   cursor: pointer;
   z-index: 1000; 
+  
 }
 
 

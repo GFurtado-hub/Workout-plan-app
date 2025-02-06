@@ -18,7 +18,7 @@
 }
 
 .workout-card a {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .button-container {
@@ -29,7 +29,7 @@
 }
 
 .delete-button {
-    background-color: rgb(21, 20, 20);
+    background-color: red;
     color: white;
     border: none;
     padding: 8px 16px;

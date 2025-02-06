@@ -12,6 +12,7 @@ function Sidebar() {
       
       
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <Link to="/">Home Page</Link>
         <Link to="/WorkoutPlansDetails">Workout Plans</Link>
         <Link to="/add-new-workout">Add New Workout</Link>
         <Link to="/about">About</Link>

@@ -1,18 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+  
+  
+  
 .navbar {
     display: flex;
     align-items: center;
     height: 4em;
     padding: 0 1rem;
-    padding-bottom: 100px; 
+    padding-bottom: 80px; 
 }
 
+
 .navbar h1 {
-    color: #121111;
-    font-size: 3em; 
-    margin-right: 1rem; 
+    font-family: 'Lora', serif;
+    font-size: 3em;
+    font-weight: 500;
+    color: white;
+    margin-left: 1rem;
+    letter-spacing: 1px;
 }
 
 .logo {
     height: 8em; 
     width: auto; 
+    margin-left: 15rem;
 }
