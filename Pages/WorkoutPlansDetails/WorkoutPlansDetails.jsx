@@ -16,16 +16,27 @@ function WorkoutPlansDetails() {
             });
     }, []);
 
-    
-    const deleteWorkout = (id) => {
-        axios.delete(`https://json-server-backend-p30d.onrender.com/workouts/${id}`)
-            .then(() => {
-                
+const deleteWorkout = (id) => {
+        axios.delete(`https://json-server-backend-p30d.onrender.com/workouts/${id}`)            .then(() => {
                 setWorkouts(workouts.filter(workout => workout.id !== id));
             })
             .catch(error => {
                 console.error('Error deleting the workout!', error);
             });
+    };
+
+    const markAsCompleted = (id) => {
+        const updatedWorkouts = workouts.map(workout =>
+            workout.id === id ? { ...workout, completed: true } : workout
+        );
+    
+        setWorkouts(updatedWorkouts);
+    
+        const completedWorkout = workouts.find(workout => workout.id === id);
+        if (completedWorkout) {
+            const storedProgress = JSON.parse(localStorage.getItem('completedWorkouts')) || [];
+            localStorage.setItem('completedWorkouts', JSON.stringify([...storedProgress, completedWorkout]));
+        }
     };
 
     return (
@@ -45,6 +56,9 @@ function WorkoutPlansDetails() {
                         <button onClick={() => deleteWorkout(workout.id)} className="delete-button">
                             DELETE
                         </button>
+                        <button onClick={() => markAsCompleted(workout.id)} className="completed-button">
+                            COMPLETED
+                        </button>
                     </div>
                 </div>
             ))}
@@ -53,3 +67,4 @@ function WorkoutPlansDetails() {
 }
 
 export default WorkoutPlansDetails;
+

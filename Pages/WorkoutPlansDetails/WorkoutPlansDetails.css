@@ -1,6 +1,6 @@
 .workouts-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 20px;
     padding: 20px;
     color: black;
@@ -14,29 +14,75 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: flex-start;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in-out;
+}
+
+.workout-card:hover {
+    transform: scale(1.03);
+}
+
+.workout-card h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.workout-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.workout-card li {
+    margin: 5px 0;
 }
 
 .workout-card a {
-    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.workout-card a:hover {
+    background-color: #0056b3;
 }
 
 .button-container {
     display: flex;
-    flex-direction: column; 
-    gap: 10px; 
-    margin-top: 10px; 
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .delete-button {
     background-color: red;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 10px 16px;
     cursor: pointer;
     border-radius: 4px;
+    font-weight: bold;
 }
 
 .delete-button:hover {
     background-color: rgb(177, 15, 15);
+}
+
+
+.completed-button {
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.completed-button:hover {
+    background-color: #218838;
 }

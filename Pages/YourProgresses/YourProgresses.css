@@ -1,0 +1,77 @@
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: black;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.progress-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in-out;
+}
+
+.progress-card:hover {
+    transform: scale(1.03);
+}
+
+.progress-card h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.progress-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.progress-card li {
+    margin: 5px 0;
+}
+
+.progress-card .completed-badge {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.back-link {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}

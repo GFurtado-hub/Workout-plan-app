@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+
+.landing-page {
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+    background-image: url('../../assets/Arena2.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.landing-page-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.landing-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+}
+
+.landing-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.8;
+}
+
+.landing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.landing-btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: #07090c;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #0cc70c;
+}
+
+.sign-up-btn {
+    background-color: #07090c;
+    color: white;
+}
+
+.sign-up-btn:hover {
+    background-color: #0f8c32;
+}
