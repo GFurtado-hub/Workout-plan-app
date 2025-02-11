@@ -1,11 +1,10 @@
 .add-workout-container {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
     padding: 20px;
-    border: 1px solid #2C2F33;
-    border-radius: 8px;
-    background-color: #2C2F33;
-    max-width: 600px; 
-    margin: 0 auto; 
+    border-radius: 10px;
 }
+
 
 .add-workout-container h2 {
     text-align: center;
@@ -23,20 +22,17 @@ label {
 }
 
 input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #000; 
+    border: 1px solid #ccc; 
 }
+
 
 textarea {
     resize: vertical; 
 }
 
 button {
-    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -44,6 +40,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    
 }
 
 button:hover {
@@ -64,7 +61,7 @@ button[type="button"]:hover {
     border: 1px solid #2C2F33;
     padding: 15px;
     border-radius: 8px;
-    background-color: #2C2F33;
+    
 }
 
 .exercise-form-group .form-group {

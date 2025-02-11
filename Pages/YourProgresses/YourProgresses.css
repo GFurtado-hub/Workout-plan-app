@@ -7,7 +7,7 @@
 }
 
 h1 {
-    color: white;
+    color: rgb(138, 6, 23);
     margin-bottom: 20px;
 }
 
@@ -64,7 +64,7 @@ h1 {
 .back-link {
     text-decoration: none;
     color: white;
-    background-color: #007bff;
+    background-color:rgb(138, 6, 23);
     padding: 10px 16px;
     border-radius: 4px;
     display: inline-block;
@@ -72,6 +72,3 @@ h1 {
     margin-top: 20px;
 }
 
-.back-link:hover {
-    background-color: #0056b3;
-}

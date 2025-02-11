@@ -5,7 +5,7 @@
   left: -220px; 
   width: 220px;
   height: 100%;
-  background-color: #2C2F33;
+  background-color: black;
   padding-top: 70px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
@@ -38,7 +38,8 @@
   font-size: 20px;
   background: none;
   border: none;
-  color: #fff;
+  color: #faf8f8;
+  background-color: #0c0b0b;
   cursor: pointer;
   z-index: 1000; 
   

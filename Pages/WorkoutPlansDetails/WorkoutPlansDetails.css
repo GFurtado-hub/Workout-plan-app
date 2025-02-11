@@ -1,3 +1,10 @@
+body {
+    background: url('../../src/assets/risen-wang-20jX9b35r_M-unsplash.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
 .workouts-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 

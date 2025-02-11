@@ -12,7 +12,7 @@ function YourProgresses() {
 
     return (
         <div className="progress-container">
-            <h1>Your Completed Workouts</h1>
+            <h1>YOUR COMPLETED WORKOUTS</h1>
             {completedWorkouts.length === 0 ? (
                 <p>No completed workouts yet.</p>
             ) : (
