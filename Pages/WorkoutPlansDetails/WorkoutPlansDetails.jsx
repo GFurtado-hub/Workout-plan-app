@@ -64,7 +64,7 @@ function WorkoutPlansDetails() {
         <div>
            
             <div className="filter-container">
-                <label htmlFor="filter">Filter by Type:</label>
+                <label htmlFor="filter">Type:</label>
                 <select id="filter" value={selectedType} onChange={handleFilterChange}>
                     {types.map((type, index) => (
                         <option key={index} value={type}>{type}</option>

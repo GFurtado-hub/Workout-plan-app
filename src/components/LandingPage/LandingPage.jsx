@@ -34,6 +34,11 @@ function LandingPage({ setIsLoggedIn }) {
         }
     };
 
+    const handleGuestAccess = () => {
+        setIsLoggedIn(true); 
+        navigate('/');
+    };
+
     return (
         <div className="landing-page">
             <div className="landing-page-content">
@@ -97,9 +102,15 @@ function LandingPage({ setIsLoggedIn }) {
                         </p>
                     </div>
                 )}
+                
+                
+                <button className="guest-button" onClick={handleGuestAccess}>
+                    Continue as Guest
+                </button>
             </div>
         </div>
     );
 }
 
 export default LandingPage;
+
