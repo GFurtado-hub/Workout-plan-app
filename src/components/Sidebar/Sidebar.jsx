@@ -15,7 +15,7 @@ function Sidebar() {
         <Link to="/">Home Page</Link>
         <Link to="/workout-plan-details">Workout Plans</Link>
         <Link to="/add-new-workout">Add New Workout</Link>
-        <Link to="/your-progresses">Your Progresses</Link>
+        <Link to="/your-progresses">Your Progress</Link>
         <Link to="/about">About</Link>
       </div>
     </div>

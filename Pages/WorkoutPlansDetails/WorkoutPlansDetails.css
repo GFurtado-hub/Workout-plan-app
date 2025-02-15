@@ -95,9 +95,7 @@ body {
 }
 
 .filter-container {
-    position: absolute;
-    top: 120px; 
-    right: 20px;
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;

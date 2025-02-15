@@ -10,6 +10,12 @@ function YourProgresses() {
         setCompletedWorkouts(storedProgress);
     }, []);
 
+    const deleteCompletedWorkout = (id) => {
+        const updatedProgress = completedWorkouts.filter(workout => workout.id !== id);
+        setCompletedWorkouts(updatedProgress);
+        localStorage.setItem('completedWorkouts', JSON.stringify(updatedProgress));
+    };
+
     return (
         <div className="progress-container">
             <h1>YOUR COMPLETED WORKOUTS</h1>
@@ -27,7 +33,8 @@ function YourProgresses() {
                                     </li>
                                 ))}
                             </ul>
-                            <span className="completed-badge">✅ Completed</span>
+                            <span className="completed-badge">✅ Completed on {workout.completedDate}</span>
+                            <button onClick={() => deleteCompletedWorkout(workout.id)} className="delete-button">DELETE</button>
                         </div>
                     ))}
                 </div>
@@ -38,4 +45,3 @@ function YourProgresses() {
 }
 
 export default YourProgresses;
-
